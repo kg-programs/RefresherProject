@@ -27,7 +27,7 @@ public class playerMovement : MonoBehaviour
         //input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         input = playerActions.Player.Move.ReadValue<Vector2>();
-
+        animator.SetFloat("falling", rb.velocity.y);
         animator.SetFloat("moveSpeed", Mathf.Abs(input.magnitude));
 
     }
